@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="Infrared light imaging using InGaAs detectorsFor applications that require high sensitivity over the 900-1700 nm wavelength range, i.e. shortwave infrared (SWIR), InGaAs sensors are used. While silico">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Review in infrared light imaging">
+<meta property="og:url" content="https://aaronzq.github.io/blog/post/infrared-light-imaging/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="Infrared light imaging using InGaAs detectorsFor applications that require high sensitivity over the 900-1700 nm wavelength range, i.e. shortwave infrared (SWIR), InGaAs sensors are used. While silico">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnphoton.2014.166/MediaObjects/41566_2014_Article_BFnphoton2014166_Fig1_HTML.jpg?as=webp">
+<meta property="og:image" content="https://onlinelibrary.wiley.com/cms/asset/e2b595b5-3769-46a6-a921-b69af395115f/lpor202300292-fig-0001-m.png">
+<meta property="article:published_time" content="2024-11-24T07:58:46.000Z">
+<meta property="article:modified_time" content="2024-12-01T08:24:02.299Z">
+<meta property="article:author" content="Aaron">
+<meta property="article:tag" content="imaging">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnphoton.2014.166/MediaObjects/41566_2014_Article_BFnphoton2014166_Fig1_HTML.jpg?as=webp">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/blog/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/blog/images/android-chrome-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Review in infrared light imaging</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/blog/">Home</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="https://aaronzq.github.io/">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/blog/post/relay-system/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aaronzq.github.io/blog/post/infrared-light-imaging/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&text=Review in infrared light imaging"><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&is_video=false&description=Review in infrared light imaging"><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Review in infrared light imaging&body=Check out this article: https://aaronzq.github.io/blog/post/infrared-light-imaging/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&name=Review in infrared light imaging&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aaronzq.github.io/blog/post/infrared-light-imaging/&t=Review in infrared light imaging"><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Infrared-light-imaging-using-InGaAs-detectors"><span class="toc-number">1.</span> <span class="toc-text">Infrared light imaging using InGaAs detectors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#List-of-commercially-available-InGaAs-sensors-partly"><span class="toc-number">1.1.</span> <span class="toc-text">List of commercially available InGaAs sensors (partly)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#InGaAs-detectors-in-microscopy"><span class="toc-number">1.2.</span> <span class="toc-text">InGaAs detectors in microscopy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deep-tissue-imaging-using-ultrasound"><span class="toc-number">1.3.</span> <span class="toc-text">Deep tissue imaging using ultrasound</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Microbolometers"><span class="toc-number">2.</span> <span class="toc-text">Microbolometers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Review in infrared light imaging
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aaron</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2024-11-24T07:58:46.000Z" class="dt-published" itemprop="datePublished">2024-11-23</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/blog/tags/imaging/" rel="tag">imaging</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <h2 id="Infrared-light-imaging-using-InGaAs-detectors"><a href="#Infrared-light-imaging-using-InGaAs-detectors" class="headerlink" title="Infrared light imaging using InGaAs detectors"></a>Infrared light imaging using InGaAs detectors</h2><p>For applications that require high sensitivity over the 900-1700 nm wavelength range, i.e. shortwave infrared (SWIR), InGaAs sensors are used. While silicon-based sensors have excellent sensitivity between UV and NIR, the bandgap of silicon prevent them from having sufficient sensitivity over 1100 nm. In contrast, InGaAs-based cameras have a lower bandgap, making this material the preferred technology for SWIR. </p>
+<p>However, the intrinsic limitation of a lower bandgap is the noise performance. See <a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/learn/learning-center/imaging-fundamentals/ingaas-cameras-the-basics/">Teledyne tutorial</a>:</p>
+<blockquote>
+<p>The biggest limitation of InGaAs cameras is their noise level. The lower bandgap of the material also produces higher dark current (thermally generated signal). Therefore, InGaAs cameras need to be deeply cooled to increase signal to noise by reducing dark noise as much as possible.</p>
+</blockquote>
+<p>The table below exhibits the typical noise performance of InGaAs detectors. In reference, the scientific CMOS camera, such as <a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/kinetix/?model=01-KINETIX-M-C&vertical=tvs-photometrics&segment=tvs">Teledyne Kinetix</a>, has extremely small readout noise (0.7 e) and low dark current (0.47 e&#x2F;pixel&#x2F;s). </p>
+<h3 id="List-of-commercially-available-InGaAs-sensors-partly"><a href="#List-of-commercially-available-InGaAs-sensors-partly" class="headerlink" title="List of commercially available InGaAs sensors (partly)"></a>List of commercially available InGaAs sensors (partly)</h3><table>
+<thead>
+<tr>
+<th align="center">Model</th>
+<th align="center">Vendor</th>
+<th align="center">Resolution</th>
+<th align="center">Pixel size ($ \mu m $)</th>
+<th align="center">Framerate (fps)</th>
+<th align="center">Peak QE</th>
+<th align="center">Readout noise (e)</th>
+<th align="center">Dark current</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/nirvana/?vertical=tvs-princeton-instruments&segment=tvs">NIRvana 640</a></td>
+<td align="center">Teledyne</td>
+<td align="center">640 x 512</td>
+<td align="center">20x20</td>
+<td align="center">110</td>
+<td align="center">85%</td>
+<td align="center">75</td>
+<td align="center">40</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/nirvana/?vertical=tvs-princeton-instruments&segment=tvs">NIRvana HS</a></td>
+<td align="center">Teledyne</td>
+<td align="center">640 x 512</td>
+<td align="center">20x20</td>
+<td align="center">250</td>
+<td align="center">85%</td>
+<td align="center">60</td>
+<td align="center">500</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/nirvana/?vertical=tvs-princeton-instruments&segment=tvs">NIRvana LN</a></td>
+<td align="center">Teledyne</td>
+<td align="center">640 x 512</td>
+<td align="center">20x20</td>
+<td align="center">2.77</td>
+<td align="center">85%</td>
+<td align="center">15</td>
+<td align="center">10</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.raptorphotonics.com/products/ninox-640-ii/">Ninox 640 II</a></td>
+<td align="center">Raptor</td>
+<td align="center">640 x 512</td>
+<td align="center">15x15</td>
+<td align="center">120</td>
+<td align="center">90%</td>
+<td align="center">18</td>
+<td align="center">1500</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.axiomoptics.com/products/c-red-2/?gad_source=1&gclid=Cj0KCQiAgJa6BhCOARIsAMiL7V9_gFCqSyqolcg1cV3rGu3HdRUlll9B14SBY4amaws7_iAG6CP1PlAaAoVeEALw_wcB">C-RED 2</a></td>
+<td align="center">Axiom</td>
+<td align="center">640 x 512</td>
+<td align="center">15x15</td>
+<td align="center">602</td>
+<td align="center">90%</td>
+<td align="center">30</td>
+<td align="center">2000</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.hamamatsu.com/jp/en/product/cameras/ingaas-cameras/C16741-40U.html">C16741-40U</a></td>
+<td align="center">Hamamatsu</td>
+<td align="center">1280 x 1024</td>
+<td align="center">5x5</td>
+<td align="center">71.53</td>
+<td align="center"></td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/linea-swir/?vertical=tvs-dalsa-oem&segment=tvs">Linea SWIR 1k</a></td>
+<td align="center">Teledyne</td>
+<td align="center">1024 x 1</td>
+<td align="center">12.5x12.5</td>
+<td align="center">40k</td>
+<td align="center">66%</td>
+<td align="center">1.5~12*</td>
+<td align="center">30000**</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.hamamatsu.com/jp/en/product/cameras/ingaas-cameras/C15333-10E04.html">C15333-10E04</a></td>
+<td align="center">Hamamatsu</td>
+<td align="center">1024 x 1</td>
+<td align="center">12.5x12.5</td>
+<td align="center">40k</td>
+<td align="center">~70%</td>
+<td align="center"></td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.exosens.com/products/manx">Manx 2048 R</a></td>
+<td align="center">Exosens</td>
+<td align="center">2048 x 1</td>
+<td align="center">12.5x250</td>
+<td align="center">256k</td>
+<td align="center">80%</td>
+<td align="center">350~12000*</td>
+<td align="center">800***</td>
+</tr>
+<tr>
+<td align="center"><a target="_blank" rel="noopener" href="https://www.exosens.com/products/manx">Manx 2048 SQ</a></td>
+<td align="center">Exosens</td>
+<td align="center">2048 x 1</td>
+<td align="center">12.5x12.5</td>
+<td align="center">256k</td>
+<td align="center">80%</td>
+<td align="center">350~12000*</td>
+<td align="center">100****</td>
+</tr>
+</tbody></table>
+<p>*Under different gains<br>**Calculated from claimed 5 pA dark current on a camera with 1024 pixels<br>***Calculated from claimed 1.6M electrons&#x2F;second on a camera with 2048 pixels<br>****Calculated from claimed 0.2M electrons&#x2F;second on a camera with 2048 pixels</p>
+<h3 id="InGaAs-detectors-in-microscopy"><a href="#InGaAs-detectors-in-microscopy" class="headerlink" title="InGaAs detectors in microscopy"></a>InGaAs detectors in microscopy</h3><p>Using longer wavelengths, such as SWIR&#x2F;NIR-II, in optical microscopy provides deeper imaging depth in dense tissue thanks to less photon scattering. Fluorescence imaging in NIR-II window has achieved millimetre depths with spatial resolutions on the order of several micrometeres, representing a substantial improvement compared with the about 100 microns by visible light[<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41566-023-01200-5">1</a>]. Studies have demonstrated mouse cerebral vasculatures through intact skull and scalp [<a target="_blank" rel="noopener" href="https://www.nature.com/articles/nphoton.2014.166">2</a>]. In this work, NIR-IIa region (1300~1400nm) was rationally chosen to both eliminate scattering below 1300 nm and to avoid incrased absorption in the &gt;1400 nm region due to first overtone vibration of water molecules (<em>see figure below</em>). A liquid-nitrogen-cooled InGaAs array detector (320x256 px, Princeton OMA-V). </p>
+<p><img src="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnphoton.2014.166/MediaObjects/41566_2014_Article_BFnphoton2014166_Fig1_HTML.jpg?as=webp" alt="Hong, et al. Figure 1"></p>
+<p>Widefield microscopy in SWIR range has demonstrated deep tissue imaging in a variety of applications [<a target="_blank" rel="noopener" href="https://www.nature.com/articles/nphoton.2014.166">2</a>]. The parallel detection using a 2D array delivers high imaging speed. However, the poor optical sectioning capability lower the image contrast and limits its usage in thin and sparse samples. Confocal scanning systems [<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41565-022-01130-3">5</a>] rejects the out-of-focus light by a physical pinhole, making it more suitable for deep scattering tissue imaging. It has even demonstrated imaging depths of 1.3 mm through cranial windows in the brain [<a target="_blank" rel="noopener" href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-9-12-6545&id=402741">6</a>]. To accelerate the image acquisition, line scanning can replace the point scanning strategy while maintaining optical sectioning ability [<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1002/lpor.202300292">3</a>] (<em>see figure below</em>). Here, an InGaAs line sensor will replace the photodiode or photomultiplier tube (PMT) and out-of-focus light is rejected by a physical slit. </p>
+<p><img src="https://onlinelibrary.wiley.com/cms/asset/e2b595b5-3769-46a6-a921-b69af395115f/lpor202300292-fig-0001-m.png" alt="Lingg, et al. Figure 1"></p>
+<p>The confocal systems require tedious scanning and are generally slower than widefield counterparts. First, the detectors at the SWIR wavelength are lack of high efficiency and prone to high noise. Additionally, the low quantum yield of available organic dyes and the long lifetimes of quantum dots further ask for a long pixel dwell time. Therefore, we rarely see SWIR confocal microscopy performing at video rate. </p>
+<table>
+<thead>
+<tr>
+<th align="center">Reference</th>
+<th align="center">System</th>
+<th align="center">Detector</th>
+<th align="center">Resolution</th>
+<th align="center">Speed (Hz)</th>
+<th align="center">Exposure (ms)</th>
+<th align="center">Pixel rate (px&#x2F;s)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">Hong, et al. [<a target="_blank" rel="noopener" href="https://www.nature.com/articles/nphoton.2014.166">2</a>]</td>
+<td align="center">Widefield</td>
+<td align="center">2D</td>
+<td align="center">320x256</td>
+<td align="center">5.3</td>
+<td align="center">100</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Zhou, et al. [<a target="_blank" rel="noopener" href="https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-6-796&id=451449">4</a>]</td>
+<td align="center">Widefield</td>
+<td align="center">2D</td>
+<td align="center">640x512</td>
+<td align="center">16</td>
+<td align="center">50</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Lingg, et al. [<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1002/lpor.202300292">3</a>]</td>
+<td align="center">Line scanning confocal</td>
+<td align="center">1D</td>
+<td align="center">500x1024</td>
+<td align="center">0.2*</td>
+<td align="center">2.2</td>
+<td align="center"></td>
+</tr>
+<tr>
+<td align="center">Wang, et al. [<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41565-022-01130-3">5</a>]</td>
+<td align="center">Point scanning confocal</td>
+<td align="center">0D</td>
+<td align="center">200x200</td>
+<td align="center">0.5</td>
+<td align="center"></td>
+<td align="center">20K</td>
+</tr>
+<tr>
+<td align="center">Fei, et al. [<a target="_blank" rel="noopener" href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-9-12-6545&id=402741">6</a>]</td>
+<td align="center">Point scanning confocal</td>
+<td align="center">0D</td>
+<td align="center">512x512</td>
+<td align="center">30**</td>
+<td align="center"></td>
+<td align="center">7.9M</td>
+</tr>
+<tr>
+<td align="center">Fei, et al. [<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acsphotonics.1c01018">7</a>]</td>
+<td align="center">Point scanning confocal</td>
+<td align="center">0D</td>
+<td align="center">512x512</td>
+<td align="center">1</td>
+<td align="center">3.8e-3</td>
+<td align="center">260k</td>
+</tr>
+</tbody></table>
+<p>*Framerate up to 120 fps was also demonstrated on 1024x1024 px on <strong>bright</strong> artificial sample<br>**This work (Reflective confocal microscopy) measures the back-scattered light, rather than the fluorescence. Therefore, the SNR is high.</p>
+<p>Dynamic imaging (e.g. video rate, &gt;25fps ) in SWIR range with optical sectioning capability presents an unsolved challenge. From the survey on commercial detectors, the camera bandwidth does not seem to be the bottleneck for this challenge. Neither does the scanner, because even commercial confocal systems (such as Leica SP8) deliver video rate imaging using resonant scannner (at visible light wavelength). To achieve high-speed SWIR imaging, we really have to increase the detector’s sensitivity so that a small pixel dwell time is tolerable.</p>
+<p>Within the confocal scanning framework, line scanning could be a better option since it parallely measures all pixels in one row. It lessens the trade-off between imaging speed and pixel dwell time. Besides, 1D sensor has a higher ceiling in imaging speed compared to 0D sensor, and even to 2D sensor. Thanks to less manufacture difficulty, a line detector is usually made in larger format. The <a target="_blank" rel="noopener" href="https://www.exosens.com/products/manx">Manx 2048 SQ</a>, for example, records 1x2048 pixels at 256 kHz. By scanning in the orthogonal direction, it could achieve a pixel resolution of 2048x2048 at 125 Hz, which have not accomplished by any commercially avaible 2D InGaAs sensors (see detector list). However, it is without consideration of signal-to-noise ratio and the corresponding pixel exposure time (3.9 $\mu s$) presents a critical disadvantage to 2D sensor (8 ms, if performing at same framerate).</p>
+<p>Line scanning is perferred for high-speed SWIR confocal microscopy. But to unlock its speed potential, the key is to collect sufficient signals to fight its detector noise.</p>
+<p>P.S. There are alternative ways of optical sectioning [<a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1361-6463/aafe88">8</a>]. Possibly optical sectioning could be achived without tedious confocal scanning.</p>
+<h3 id="Deep-tissue-imaging-using-ultrasound"><a href="#Deep-tissue-imaging-using-ultrasound" class="headerlink" title="Deep tissue imaging using ultrasound"></a>Deep tissue imaging using ultrasound</h3><p>Deep tissue imaging can alternatively be acomplished by acoustic imaging [<a target="_blank" rel="noopener" href="https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-6-796&id=451449">4</a>]:</p>
+<blockquote>
+<p>Deep-tissue imaging with optical contrast can alternatively be accomplished with hybrid approaches combining light and sound. In particular, ultrasound waves experience little scattering in soft biological tissues as compared to light. </p>
+</blockquote>
+<p>Photoacoustic (PA) imaging utilizes the photothermal mechanism in biological tissues where a laser pulse is absorbed to expand the target with heat. The acoustic wave is produced and then detected by transducer. The imaging depth at centimeter is possible when using near-infrared wavelength laser. However, the PA methods generally differ from the fluorescence-based techniques in that the image contrast is mainly associated with hemoglobin absorption, which may compromise sensitive detection of extrinsic labels in the presence of strong background absorption by blood.</p>
+<h2 id="Microbolometers"><a href="#Microbolometers" class="headerlink" title="Microbolometers"></a>Microbolometers</h2><p>Microbolometers detects radiotion with wavelengths between 7.5-14 um, the LWIR range. The radiation heats it and changes its electrical resistance. The resistance change is then measured and processed. The current technology allows the pixel size and number to approximate semiconductor based photon detector. Howver, it is generally less sensitive (due to higher noise). The sensitivity is partly limited by the thermal conductance of the pixel. The speed of response it limited by the thermal heat capacity divided by the thermal conductance. Reducing the heat capacity increases the speed but also increases statistical mechanical thermal temperature fluctuations (noise).</p>
+<h2 id="References"><a href="#References" class="headerlink" title="References"></a>References</h2><p>[<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41566-023-01200-5">1</a>] Pitruzzello, Giampaolo. “Seeing into deep tissue.” Nature Photonics 17.5 (2023): 376-377.<br>[<a target="_blank" rel="noopener" href="https://www.nature.com/articles/nphoton.2014.166">2</a>] Hong, Guosong, et al. “Through-skull fluorescence imaging of the brain in a new near-infrared window.” Nature photonics 8.9 (2014): 723-730.<br>[<a target="_blank" rel="noopener" href="https://onlinelibrary.wiley.com/doi/full/10.1002/lpor.202300292">3</a>] Lingg, Jakob GP, et al. “Shortwave‐Infrared Line‐Scan Confocal Microscope for Deep Tissue Imaging in Intact Organs.” Laser &amp; Photonics Reviews 17.11 (2023): 2300292.<br>[<a target="_blank" rel="noopener" href="https://opg.optica.org/optica/fulltext.cfm?uri=optica-8-6-796&id=451449">4</a>] Zhou, Quanyu, et al. “Diffuse optical localization imaging for noninvasive deep brain microangiography in the NIR-II window.” Optica 8.6 (2021): 796-803.<br>[<a target="_blank" rel="noopener" href="https://www.nature.com/articles/s41565-022-01130-3">5</a>] Wang, Feifei, et al. “In vivo non-invasive confocal fluorescence imaging beyond 1,700 nm using superconducting nanowire single-photon detectors.” Nature nanotechnology 17.6 (2022): 653-660.<br>[<a target="_blank" rel="noopener" href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-9-12-6545&id=402741">6</a>] Xia, Fei, et al. “In vivo label-free confocal imaging of the deep mouse brain with long-wavelength illumination.” Biomedical optics express 9.12 (2018): 6545-6555.<br>[<a target="_blank" rel="noopener" href="https://pubs.acs.org/doi/10.1021/acsphotonics.1c01018">7</a>] Xia, Fei, et al. “Short-wave infrared confocal fluorescence imaging of deep mouse brain with a superconducting nanowire single-photon detector.” Acs Photonics 8.9 (2021): 2800-2810.<br>[<a target="_blank" rel="noopener" href="https://iopscience.iop.org/article/10.1088/1361-6463/aafe88">8</a>] Parot, Vicente J., et al. “Compressed Hadamard microscopy for high-speed optically sectioned neuronal activity recordings.” Journal of Physics D: Applied Physics 52.14 (2019): 144001.</p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/blog/">Home</a></li>
+        
+          <li><a href="/blog/archives/">Writing</a></li>
+        
+          <li><a href="https://aaronzq.github.io/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Infrared-light-imaging-using-InGaAs-detectors"><span class="toc-number">1.</span> <span class="toc-text">Infrared light imaging using InGaAs detectors</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#List-of-commercially-available-InGaAs-sensors-partly"><span class="toc-number">1.1.</span> <span class="toc-text">List of commercially available InGaAs sensors (partly)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#InGaAs-detectors-in-microscopy"><span class="toc-number">1.2.</span> <span class="toc-text">InGaAs detectors in microscopy</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deep-tissue-imaging-using-ultrasound"><span class="toc-number">1.3.</span> <span class="toc-text">Deep tissue imaging using ultrasound</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#Microbolometers"><span class="toc-number">2.</span> <span class="toc-text">Microbolometers</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#References"><span class="toc-number">3.</span> <span class="toc-text">References</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aaronzq.github.io/blog/post/infrared-light-imaging/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&text=Review in infrared light imaging"><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&is_video=false&description=Review in infrared light imaging"><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Review in infrared light imaging&body=Check out this article: https://aaronzq.github.io/blog/post/infrared-light-imaging/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&title=Review in infrared light imaging"><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aaronzq.github.io/blog/post/infrared-light-imaging/&name=Review in infrared light imaging&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aaronzq.github.io/blog/post/infrared-light-imaging/&t=Review in infrared light imaging"><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2023-2024
+    Aaron
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/blog/">Home</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="https://aaronzq.github.io/">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/blog/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'aaronzq-blog';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+<!-- utterances Comments -->
+
+</body>
+</html>
