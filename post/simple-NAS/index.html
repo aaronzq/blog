@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+    <!-- so meta -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="HandheldFriendly" content="True">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5" />
+    <meta name="description" content="I came home with a few portable harddrives of personal photos, videos to back up. The commercial NAS came across my mind but they seem too expensive. After all I don’t think I really need RAID array,">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Data back-up server using my 20-year-old desktop - Here are some notes.">
+<meta property="og:url" content="https://aaronzq.github.io/blog/post/simple-NAS/index.html">
+<meta property="og:site_name" content="BLOG">
+<meta property="og:description" content="I came home with a few portable harddrives of personal photos, videos to back up. The commercial NAS came across my mind but they seem too expensive. After all I don’t think I really need RAID array,">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2025-01-25T14:55:50.000Z">
+<meta property="article:modified_time" content="2025-02-13T05:25:36.994Z">
+<meta property="article:author" content="Aaron">
+<meta property="article:tag" content="electronics">
+<meta name="twitter:card" content="summary">
+    
+    
+      
+        
+          <link rel="shortcut icon" href="/blog/images/favicon.ico">
+        
+      
+      
+        
+          <link rel="icon" type="image/png" href="/blog/images/android-chrome-192x192.png" sizes="192x192">
+        
+      
+      
+        
+          <link rel="apple-touch-icon" sizes="180x180" href="/blog/images/apple-touch-icon.png">
+        
+      
+    
+    <!-- title -->
+    <title>Data back-up server using my 20-year-old desktop - Here are some notes.</title>
+    <!-- async scripts -->
+    <!-- Google Analytics -->
+
+
+    <!-- Umami Analytics -->
+
+
+    <!-- styles -->
+    
+<link rel="stylesheet" href="/blog/css/style.css">
+
+    <!-- persian styles -->
+    
+    <!-- rss -->
+    
+    
+	<!-- mathjax -->
+	
+		<script type="text/x-mathjax-config">
+		  MathJax.Hub.Config({
+			tex2jax: {
+			  skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+			  inlineMath: [['$','$']]
+			}
+		  });
+		</script>
+		<script src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-MML-AM_CHTML' async></script>
+	
+<!-- hexo injector head_end start -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
+<!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.0.0"></head>
+
+<body class="max-width mx-auto px3 ltr">
+    
+      <div id="header-post">
+  <a id="menu-icon" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="menu-icon-tablet" href="#" aria-label="Menu"><i class="fa-solid fa-bars fa-lg"></i></a>
+  <a id="top-icon-tablet" href="#" aria-label="Top" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');" style="display:none;"><i class="fa-solid fa-chevron-up fa-lg"></i></a>
+  <span id="menu">
+    <span id="nav">
+      <ul>
+        <!--
+       --><li><a href="/blog/">Home</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="https://aaronzq.github.io/">Projects</a></li><!--
+     -->
+      </ul>
+    </span>
+    <br/>
+    <span id="actions">
+      <ul>
+        
+        
+        <li><a class="icon" aria-label="Next post" href="/blog/post/infrared-light-imaging/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
+        <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
+      </ul>
+      <span id="i-prev" class="info" style="display:none;">Previous post</span>
+      <span id="i-next" class="info" style="display:none;">Next post</span>
+      <span id="i-top" class="info" style="display:none;">Back to top</span>
+      <span id="i-share" class="info" style="display:none;">Share post</span>
+    </span>
+    <br/>
+    <div id="share" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aaronzq.github.io/blog/post/simple-NAS/"><i class="fab fa-facebook " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aaronzq.github.io/blog/post/simple-NAS/&text=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-twitter " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-linkedin " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aaronzq.github.io/blog/post/simple-NAS/&is_video=false&description=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-pinterest " aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Data back-up server using my 20-year-old desktop - Here are some notes.&body=Check out this article: https://aaronzq.github.io/blog/post/simple-NAS/"><i class="fa-solid fa-envelope " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-get-pocket " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-reddit " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-stumbleupon " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-digg " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aaronzq.github.io/blog/post/simple-NAS/&name=Data back-up server using my 20-year-old desktop - Here are some notes.&description="><i class="fab fa-tumblr " aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aaronzq.github.io/blog/post/simple-NAS/&t=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-hacker-news " aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+    
+    
+      <div id="toc">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-to-install-the-KDE-Partition-Manager"><span class="toc-number">1.</span> <span class="toc-text">Where to install the KDE Partition Manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Automatic-mount-of-disk"><span class="toc-number">2.</span> <span class="toc-text">Automatic mount of disk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ladder-for-Github-access"><span class="toc-number">3.</span> <span class="toc-text">Ladder (for Github access)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deal-with-Bitlocker"><span class="toc-number">4.</span> <span class="toc-text">Deal with Bitlocker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Monitor-disk-i-o"><span class="toc-number">5.</span> <span class="toc-text">Monitor disk i&#x2F;o</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configurate-samba"><span class="toc-number">6.</span> <span class="toc-text">Configurate samba</span></a></li></ol>
+      </div>
+    
+  </span>
+</div>
+
+    
+    <div class="content index py4 ">
+        
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+  <header>
+    
+    <h1 class="posttitle p-name" itemprop="name headline">
+        Data back-up server using my 20-year-old desktop - Here are some notes.
+    </h1>
+
+
+
+    <div class="meta">
+      <span class="author p-author h-card" itemprop="author" itemscope itemtype="http://schema.org/Person">
+        <span class="p-name" itemprop="name">Aaron</span>
+      </span>
+      
+    <div class="postdate">
+      
+        <time datetime="2025-01-25T14:55:50.000Z" class="dt-published" itemprop="datePublished">2025-01-25</time>
+        
+      
+    </div>
+
+
+      
+
+      
+    <div class="article-tag">
+        <i class="fa-solid fa-tag"></i>
+        <a class="p-category" href="/blog/tags/electronics/" rel="tag">electronics</a>
+    </div>
+
+
+    </div>
+  </header>
+  
+
+  <div class="content e-content" itemprop="articleBody">
+    <p>I came home with a few portable harddrives of personal photos, videos to back up. The commercial NAS came across my mind but they seem too expensive. After all I don’t think I really need RAID array, media center, user management or other fancy functions. The most important thing for me is simply a large storage to keep a second copy of all my data (like 5 TB this time).</p>
+<p>I happened to find the old desktop I used to play Starcraft and Plants v.s. Zombies on. All those fun and excitement and good memory. But it has a Pentium E5400 @ 1.5Ghz CPU and 4 GB RAM, which totally makes sense since man that was almost 20 years ago. I wanna try setting up as a linux server and using samba for simple data sharing.</p>
+<p>I installed Manjaro (KDE Plasma) because I heard some people saying it’s light-weighted to the hardware and friendly to beginners. And I installed a new Seagate IronWolf 8T harddrive to the computer. </p>
+<p>Below are some notes:</p>
+<h3 id="Where-to-install-the-KDE-Partition-Manager"><a href="#Where-to-install-the-KDE-Partition-Manager" class="headerlink" title="Where to install the KDE Partition Manager"></a>Where to install the KDE Partition Manager</h3><p>Manjaro KDE should come with a GUI-based disk partition tool. However I chose the minimal version when installling Manjaro due to limited size of my USB stick. Possibly for this reason the KDE Partition Manages was skipped. In this case, we can go the Manjaro Hello in the Start menu. There we can install those default apps included in the full Manjaro installation.</p>
+<h3 id="Automatic-mount-of-disk"><a href="#Automatic-mount-of-disk" class="headerlink" title="Automatic mount of disk"></a>Automatic mount of disk</h3><ol>
+<li><p>Find the uuid by <code>ls -l /dev/disk/by-uuid</code> of the new disk. If the Device’s name is unknown, we can use <code>sudo fdisk -l</code> to list all disks.</p>
+</li>
+<li><p>Append a new line to &#x2F;etc&#x2F;fstab. We can edit the file using <code>nano</code>: <code>nano /etc/fstab</code>. And add a new line at the bottom: <code>/run/media/Data</code> is the mounting point which we can create ourselves; btrfs is the file system format, which should be decided during disk partition; 0 0 means no disk check during system boot up.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">UUID=a575ce8f-ebe8-48b1-b961-f8126bac42d3 /run/media/aaron/Data btrfs defaults 0 0</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Ladder-for-Github-access"><a href="#Ladder-for-Github-access" class="headerlink" title="Ladder (for Github access)"></a>Ladder (for Github access)</h3><p>I think the easiest way to give this old desktop, namely server, a ladder is to <a target="_blank" rel="noopener" href="https://www.cnblogs.com/coldchair/p/18050457">use ssh</a>. We need a local computer, such as our daily laptop, which already has access to the websites blocked by GFW, for example, using proxy tools like clash. We can open a channel between the server and the laptop using ssh and ask the server to talk to the internet through the laptop rather than directly to the router.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh &lt;username&gt;@&lt;server_ip&gt; -R &lt;server_port&gt;:localhost:&lt;local_port&gt;</span><br></pre></td></tr></table></figure>
+<p>The server_port is the port used by the server to forward the network traffic to (7001~8999, as long as it doesn’t conflict with existing ports) and the local_port is the port used by local computer’s ladder. For clash, the local_port is usually 7890. Note that we should ‘<strong>Allow connect from LAN</strong>‘ in clash. </p>
+<p>For example:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh aaron@192.168.31.180 -R 7890:localhost:7890</span><br></pre></td></tr></table></figure>
+
+<p>After the ssh is established, use the following command to forward all http and https traffic in this ssh session through local computer proxy. 127.0.0.1 is the <a target="_blank" rel="noopener" href="https://ithelp.ithome.com.tw/articles/10311096">localhost ip address</a>, which can be checked in <strong>&#x2F;etc&#x2F;hosts</strong>.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">export</span> http_proxy=http://127.0.0.1:7890;</span><br><span class="line"><span class="built_in">export</span> https_proxy=http://127.0.0.1:7890;</span><br></pre></td></tr></table></figure>
+
+<p>To stop using the proxy:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unset</span> http_proxy;</span><br><span class="line"><span class="built_in">unset</span> https_proxy;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Deal-with-Bitlocker"><a href="#Deal-with-Bitlocker" class="headerlink" title="Deal with Bitlocker"></a>Deal with Bitlocker</h3><p>The reason why I need ladder is to install <strong>Dislocker</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S Dislocker</span><br></pre></td></tr></table></figure>
+<p>Without ladder the command above will have a difficult time connecting to Github. </p>
+<p><strong>Dislocker</strong> is used to decrypt one of my harddrive encrypted by Bitlocker, a tool only compatible with Windows. To use it, we need to first create two folders to store decrypted files and to mount the disk:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">sudo <span class="built_in">mkdir</span> -p /run/media/aaron/decrypt</span><br><span class="line">sudo <span class="built_in">mkdir</span> -p /run/media/aaron/decrypt_mount</span><br></pre></td></tr></table></figure>
+
+<p>Then we should find the label for this Bitlocker disk by <code>lsblk</code> or <code>fdisk -l</code> and get something like <strong>&#x2F;dev&#x2F;sdc1</strong></p>
+<p>We use the following command to decrypt the disk</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo dislocker /dev/sdc1 -u&lt;password&gt; -- /run/media/aaron/decrypt</span><br></pre></td></tr></table></figure>
+<p>Note that there is no space between <code>-u</code> and the password.</p>
+<p>Next, mount the disk</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mount -o loop /run/media/aaron/decrypt/dislocker-file /run/media/aaron/decrypt_mount</span><br></pre></td></tr></table></figure>
+
+<p>The disk is ready now. </p>
+<h3 id="Monitor-disk-i-o"><a href="#Monitor-disk-i-o" class="headerlink" title="Monitor disk i&#x2F;o"></a>Monitor disk i&#x2F;o</h3><p><code>sudo iotop</code> </p>
+<h3 id="Configurate-samba"><a href="#Configurate-samba" class="headerlink" title="Configurate samba"></a>Configurate samba</h3><p>Install <strong>samba</strong> by</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pacman -S samba manjaro-settings-samba nautilus-share</span><br></pre></td></tr></table></figure>
+
+<p>Go to <strong>&#x2F;etc&#x2F;samba</strong> and edit file <strong>smb.conf</strong>. Back up the original file with <code>mv /etc/samba/smb.conf /etc/samba/smb.conf.bak</code> if necessary. This configuration file is the most important when setting up samba service. See some <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_34116110/article/details/94563295">posts</a> for reference.</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line">[global]</span><br><span class="line">   workgroup = WORKGROUP</span><br><span class="line">   dns proxy = No</span><br><span class="line">   log file = /var/log/samba/%m.log</span><br><span class="line">   map to guest = Bad User</span><br><span class="line">   guest account = nobody</span><br><span class="line">   max log size = 0</span><br><span class="line">   netbios name = HOME-NAS</span><br><span class="line">   # 这个名称将会显示在其他电脑的网络邻居里</span><br><span class="line">   security = USER</span><br><span class="line">   server string = Samba Server</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">[Home-NAS-Data]</span><br><span class="line">   # 给共享文件夹起个别名，在局域网内显示</span><br><span class="line"></span><br><span class="line">   admin users = aaron</span><br><span class="line">   # 管理员设了自己，和server的用户名一样</span><br><span class="line">   comment = NAS Share</span><br><span class="line">   create mask = 0777</span><br><span class="line">   directory mask = 0777</span><br><span class="line">   force create mode = 0777</span><br><span class="line">   force directory mode = 0777</span><br><span class="line">   # 这四条管理上传文件和创建文件夹的权限，不加的话某台电脑访问文件夹上传文件，其他局域网的电脑可能无法修改这些文件</span><br><span class="line">   path = /run/media/aaron/Data</span><br><span class="line">   # 共享的文件夹的路径</span><br><span class="line">   read only = No</span><br><span class="line">   browseable = yes</span><br><span class="line">   writeable = yes</span><br></pre></td></tr></table></figure>
+
+<p>Use <code>testparm</code> to check is the configuration has correct grammar. </p>
+<p>Next, add user and set up password.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">smbpasswd -a aaron</span><br></pre></td></tr></table></figure>
+
+<p>Give the shared folder the correct permissions.</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">chmod</span> 777 /run/media/aaron/Data</span><br></pre></td></tr></table></figure>
+
+<p>Start the samba service and make it auto-start with the system</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl start smb</span><br><span class="line">systemctl <span class="built_in">enable</span> smb</span><br></pre></td></tr></table></figure>
+<p>Status check and restart can be done with </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">systemctl status smb</span><br><span class="line">systemctl restart smb</span><br></pre></td></tr></table></figure>
+
+<p>Finally we can go to our Windows PC and Mac in the same local network and start accessing the shared files. For example, in Finder on my Mac, I can go to Locations-Network and find <strong>HOME_NAS</strong>. Double click and use <strong>Connect as</strong> button to log in as <strong>aaron</strong>. I will have full access to the shared folder. </p>
+
+  </div>
+</article>
+
+    <div class="blog-post-comments">
+        <div id="disqus_thread">
+            <noscript>Please enable JavaScript to view the comments.</noscript>
+        </div>
+    </div>
+
+
+
+        
+          <div id="footer-post-container">
+  <div id="footer-post">
+
+    <div id="nav-footer" style="display: none">
+      <ul>
+        
+          <li><a href="/blog/">Home</a></li>
+        
+          <li><a href="/blog/archives/">Writing</a></li>
+        
+          <li><a href="https://aaronzq.github.io/">Projects</a></li>
+        
+      </ul>
+    </div>
+
+    
+    
+      <div id="toc-footer" style="display: none">
+        <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#Where-to-install-the-KDE-Partition-Manager"><span class="toc-number">1.</span> <span class="toc-text">Where to install the KDE Partition Manager</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Automatic-mount-of-disk"><span class="toc-number">2.</span> <span class="toc-text">Automatic mount of disk</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Ladder-for-Github-access"><span class="toc-number">3.</span> <span class="toc-text">Ladder (for Github access)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deal-with-Bitlocker"><span class="toc-number">4.</span> <span class="toc-text">Deal with Bitlocker</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Monitor-disk-i-o"><span class="toc-number">5.</span> <span class="toc-text">Monitor disk i&#x2F;o</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Configurate-samba"><span class="toc-number">6.</span> <span class="toc-text">Configurate samba</span></a></li></ol>
+      </div>
+    
+
+    <div id="share-footer" style="display: none">
+      <ul>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.facebook.com/sharer.php?u=https://aaronzq.github.io/blog/post/simple-NAS/"><i class="fab fa-facebook fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://twitter.com/share?url=https://aaronzq.github.io/blog/post/simple-NAS/&text=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-twitter fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.linkedin.com/shareArticle?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-linkedin fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://pinterest.com/pin/create/bookmarklet/?url=https://aaronzq.github.io/blog/post/simple-NAS/&is_video=false&description=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-pinterest fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" href="mailto:?subject=Data back-up server using my 20-year-old desktop - Here are some notes.&body=Check out this article: https://aaronzq.github.io/blog/post/simple-NAS/"><i class="fa-solid fa-envelope fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://getpocket.com/save?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-get-pocket fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://reddit.com/submit?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-reddit fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.stumbleupon.com/submit?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-stumbleupon fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://digg.com/submit?url=https://aaronzq.github.io/blog/post/simple-NAS/&title=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-digg fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="http://www.tumblr.com/share/link?url=https://aaronzq.github.io/blog/post/simple-NAS/&name=Data back-up server using my 20-year-old desktop - Here are some notes.&description="><i class="fab fa-tumblr fa-lg" aria-hidden="true"></i></a></li>
+  <li><a class="icon" target="_blank" rel="noopener" href="https://news.ycombinator.com/submitlink?u=https://aaronzq.github.io/blog/post/simple-NAS/&t=Data back-up server using my 20-year-old desktop - Here are some notes."><i class="fab fa-hacker-news fa-lg" aria-hidden="true"></i></a></li>
+</ul>
+
+    </div>
+
+    <div id="actions-footer">
+        <a id="menu" class="icon" href="#" onclick="$('#nav-footer').toggle();return false;"><i class="fa-solid fa-bars fa-lg" aria-hidden="true"></i> Menu</a>
+        
+          <a id="toc" class="icon" href="#" onclick="$('#toc-footer').toggle();return false;"><i class="fa-solid fa-list fa-lg" aria-hidden="true"></i> TOC</a>
+        
+        <a id="share" class="icon" href="#" onclick="$('#share-footer').toggle();return false;"><i class="fa-solid fa-share-alt fa-lg" aria-hidden="true"></i> Share</a>
+        <a id="top" style="display:none" class="icon" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up fa-lg" aria-hidden="true"></i> Top</a>
+    </div>
+
+  </div>
+</div>
+
+        
+        <footer id="footer">
+  <div class="footer-left">
+    Copyright &copy;
+    
+    
+    2023-2025
+    Aaron
+  </div>
+  <div class="footer-right">
+    <nav>
+      <ul>
+        <!--
+       --><li><a href="/blog/">Home</a></li><!--
+     --><!--
+       --><li><a href="/blog/archives/">Writing</a></li><!--
+     --><!--
+       --><li><a href="https://aaronzq.github.io/">Projects</a></li><!--
+     -->
+      </ul>
+    </nav>
+  </div>
+</footer>
+
+    </div>
+    <!-- styles -->
+
+
+
+  <link rel="preload" as="style" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" onload="this.onload=null;this.rel='stylesheet'"/>
+
+
+    <!-- jquery -->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" crossorigin="anonymous"></script>
+
+
+
+
+<!-- clipboard -->
+
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.7/clipboard.min.js" crossorigin="anonymous"></script>
+  
+  <script type="text/javascript">
+  $(function() {
+    // copy-btn HTML
+    var btn = "<span class=\"btn-copy tooltipped tooltipped-sw\" aria-label=\"Copy to clipboard!\">";
+    btn += '<i class="fa-regular fa-clone"></i>';
+    btn += '</span>';
+    // mount it!
+    $(".highlight table").before(btn);
+    var clip = new ClipboardJS('.btn-copy', {
+      text: function(trigger) {
+        return Array.from(trigger.nextElementSibling.querySelectorAll('.code')).reduce((str,it)=>str+it.innerText+'\n','')
+      }
+    });
+    clip.on('success', function(e) {
+      e.trigger.setAttribute('aria-label', "Copied!");
+      e.clearSelection();
+    })
+  })
+  </script>
+
+
+<script src="/blog/js/main.js"></script>
+
+<!-- search -->
+
+<!-- Baidu Analytics -->
+
+<!-- Cloudflare Analytics -->
+
+<!-- Disqus Comments -->
+
+    <script type="text/javascript">
+        var disqus_shortname = 'aaronzq-blog';
+
+        (function(){
+            var dsq = document.createElement('script');
+            dsq.type = 'text/javascript';
+            dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        }());
+    </script>
+
+<!-- utterances Comments -->
+
+</body>
+</html>

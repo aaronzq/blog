@@ -15,8 +15,8 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://media.springernature.com/full/springer-static/image/art%3A10.1038%2Fnphoton.2014.166/MediaObjects/41566_2014_Article_BFnphoton2014166_Fig1_HTML.jpg?as=webp">
 <meta property="og:image" content="https://onlinelibrary.wiley.com/cms/asset/e2b595b5-3769-46a6-a921-b69af395115f/lpor202300292-fig-0001-m.png">
-<meta property="article:published_time" content="2024-11-24T07:58:46.000Z">
-<meta property="article:modified_time" content="2024-12-03T06:32:28.218Z">
+<meta property="article:published_time" content="2024-11-23T15:58:46.000Z">
+<meta property="article:modified_time" content="2025-02-11T10:08:51.875Z">
 <meta property="article:author" content="Aaron">
 <meta property="article:tag" content="imaging">
 <meta name="twitter:card" content="summary">
@@ -97,8 +97,10 @@
     <span id="actions">
       <ul>
         
+        <li><a class="icon" aria-label="Previous post" href="/blog/post/simple-NAS/"><i class="fa-solid fa-chevron-left" aria-hidden="true" onmouseover="$('#i-prev').toggle();" onmouseout="$('#i-prev').toggle();"></i></a></li>
         
-        <li><a class="icon" aria-label="Next post" href="/blog/post/relay-system/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
+        
+        <li><a class="icon" aria-label="Next post" href="/blog/post/workstation-cluster/"><i class="fa-solid fa-chevron-right" aria-hidden="true" onmouseover="$('#i-next').toggle();" onmouseout="$('#i-next').toggle();"></i></a></li>
         
         <li><a class="icon" aria-label="Back to top" href="#" onclick="$('html, body').animate({ scrollTop: 0 }, 'fast');"><i class="fa-solid fa-chevron-up" aria-hidden="true" onmouseover="$('#i-top').toggle();" onmouseout="$('#i-top').toggle();"></i></a></li>
         <li><a class="icon" aria-label="Share post" href="#"><i class="fa-solid fa-share-alt" aria-hidden="true" onmouseover="$('#i-share').toggle();" onmouseout="$('#i-share').toggle();" onclick="$('#share').toggle();return false;"></i></a></li>
@@ -153,7 +155,7 @@
       
     <div class="postdate">
       
-        <time datetime="2024-11-24T07:58:46.000Z" class="dt-published" itemprop="datePublished">2024-11-23</time>
+        <time datetime="2024-11-23T15:58:46.000Z" class="dt-published" itemprop="datePublished">2024-11-23</time>
         
       
     </div>
@@ -178,7 +180,7 @@
 <blockquote>
 <p>The biggest limitation of InGaAs cameras is their noise level. The lower bandgap of the material also produces higher dark current (thermally generated signal). Therefore, InGaAs cameras need to be deeply cooled to increase signal to noise by reducing dark noise as much as possible.</p>
 </blockquote>
-<p>The table below exhibits the typical noise performance of InGaAs detectors. In reference, the scientific CMOS camera, such as <a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/kinetix/?model=01-KINETIX-M-C&vertical=tvs-photometrics&segment=tvs">Teledyne Kinetix</a>, has extremely small readout noise (0.7 e) and low dark current (0.47 e&#x2F;pixel&#x2F;s). </p>
+<p>The table below exhibits the typical noise performance of InGaAs detectors. In reference, the Si-based scientific CMOS camera, such as <a target="_blank" rel="noopener" href="https://www.teledynevisionsolutions.com/products/kinetix/?model=01-KINETIX-M-C&vertical=tvs-photometrics&segment=tvs">Teledyne Kinetix</a>, has extremely small readout noise (0.7 e) and low dark current (0.47 e&#x2F;pixel&#x2F;s). </p>
 <h3 id="List-of-commercially-available-InGaAs-sensors-partly"><a href="#List-of-commercially-available-InGaAs-sensors-partly" class="headerlink" title="List of commercially available InGaAs sensors (partly)"></a>List of commercially available InGaAs sensors (partly)</h3><table>
 <thead>
 <tr>
@@ -367,7 +369,7 @@
 </tr>
 </tbody></table>
 <p>*Framerate up to 120 fps was also demonstrated on 1024x1024 px on <strong>bright</strong> artificial sample<br>**This work (Reflective confocal microscopy) measures the back-scattered light, rather than the fluorescence. Therefore, the SNR is high.</p>
-<p>It seems to me that dynamic fluorescence imaging (e.g. video rate, &gt;25fps ) in SWIR range with optical sectioning capability presents an unsolved challenge. Both fluorescence and optical sectioning are important to this argument since they together present a SNR problem: Weak fluorescence demands long exposure time; But optical sectioning usually requires scanning that inhibits long pixel exposure. And it is indeed a meaningful challenge, because the solution will allow mapping of deep tissue dynamics with specific fluorescent labeling. For example, we can image brain <em>in vivo</em> with infrared fluorescence indicator on neuron action potentials at depth much deeper than current visible light indicators. Note that single-photon indicators are more convenient than two-photon indicator, which is an advantage of SWIR over multi-photon [<a target="_blank" rel="noopener" href="https://www.spiedigitallibrary.org/journals/neurophotonics/volume-11/issue-03/035007/Optical-constraints-on-two-photon-voltage-imaging/10.1117/1.NPh.11.3.035007.full">9</a>].</p>
+<p>It seems to me that dynamic fluorescence imaging (e.g. video rate, &gt;25fps ) in SWIR range with optical sectioning capability presents an unsolved challenge. Both SWIR fluorescence and optical sectioning are important attributes to this argument since they together present a SNR problem: Weak SWIR fluorescence demands long exposure time; But optical sectioning usually requires time-consuming scanning that inhibits long pixel exposure. And it is indeed a meaningful challenge, because the solution will allow mapping of deep tissue dynamics with specific fluorescent labeling. For example, we can image brain <em>in vivo</em> with infrared fluorescence indicator on neuron action potentials at depth much deeper than current visible light indicators. Note that single-photon indicators are more convenient than two-photon indicator, which is an advantage of SWIR over multi-photon [<a target="_blank" rel="noopener" href="https://www.spiedigitallibrary.org/journals/neurophotonics/volume-11/issue-03/035007/Optical-constraints-on-two-photon-voltage-imaging/10.1117/1.NPh.11.3.035007.full">9</a>].</p>
 <p>For imaging scenariors where detector noise rather than photon noise is dominant, multiplexed detection will have a SNR advantage (also known as Fellgett advantage) [<a target="_blank" rel="noopener" href="https://opg.optica.org/ol/fulltext.cfm?uri=ol-39-3-430&id=277056">10</a>]. Here is the idea: if the SNR of one pixel is low, can we aggregate and detect lots of pixels together and reconstruct each of them later? This multiplexed measurement could increase the photons per pixel and thus surpasses the InGaAs detector noise even at short exposure time.</p>
 <h4 id="Modify-the-line-scanning-confocal-microscopy-for-multiplexing-detection"><a href="#Modify-the-line-scanning-confocal-microscopy-for-multiplexing-detection" class="headerlink" title="Modify the line scanning confocal microscopy for multiplexing detection"></a>Modify the line scanning confocal microscopy for multiplexing detection</h4><p>Similar to single pixel imaging, we can apply one-dimensional (1D) Hadamard mask to the object: each row is encoded either by multiplying by one or zero before being added up. According to the Hadamard transformation theory, we are going to measure $ N $ multiplexed 1D signals to reconstruct the original $ N \times N $ image (let’s forget about compressed sensing for now). To acomplish this, let’s then imagine a line scanning system. We add a light modulator after the laser module to alter the intensity of entire line. And we change it to zero or one according to the hadamard pattern as it scans row by row across the object. The line sensor after a confocal slit will expose throughout entire scan to acquire one multiplexed 1D signal. Sounds like a good system. We have multiplexing, we have confocal and we have perfect light efficiency.</p>
 <p>But there’s a small problem here. To capture a frame within the same time $ t $ as conventional line-by-line confocal scanning does, each multiplxed measurement should be finished within the time $ t&#x2F;N $, that is conventionally consumed by one line. If we scan the object sequentially to generate the multiplexed measurement, each line in the multiplexed measurement gets exposed for merely $ t&#x2F;N&#x2F;N $. And if the fluorescence already saturated, the photon we receive will be proportional to the exposure time. Even in the best case where signal multiplexing increase the signal intensity by $ N $ times, we get the same SNR as conventional scanning.</p>
@@ -454,7 +456,7 @@
     Copyright &copy;
     
     
-    2023-2024
+    2023-2025
     Aaron
   </div>
   <div class="footer-right">
